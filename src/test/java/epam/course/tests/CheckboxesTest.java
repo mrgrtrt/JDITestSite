@@ -4,27 +4,23 @@ import com.epam.jdi.uitests.web.selenium.elements.common.CheckBox;
 import epam.course.InitTests;
 import epam.course.dataproviders.CheckboxDP;
 import epam.course.objects.User;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
 
-import static epam.course.JDISite.differentElementPage;
-import static epam.course.JDISite.homePage;
-import static epam.course.JDISite.login;
+import static epam.course.JDISite.*;
 
 /**
  * Created by Rita on 16.11.2016.
  */
 public class CheckboxesTest extends InitTests {
 
-    @BeforeTest
+    @BeforeMethod
     public void before() {
-        homePage.isOpened();
-        login.submit(new User("epam", "1234"));
-        differentElementPage.open();
+        //homePage.isOpened();
+        //login.submit(new User("epam", "1234"));
+        differentElementPage.isOpened();
     }
 
     @Test(dataProviderClass = CheckboxDP.class, dataProvider = "checkbox")

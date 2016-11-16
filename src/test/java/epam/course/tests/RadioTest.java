@@ -3,23 +3,18 @@ package epam.course.tests;
 import epam.course.InitTests;
 import epam.course.enums.MetalsRadio;
 import epam.course.objects.User;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-import static epam.course.JDISite.differentElementPage;
-import static epam.course.JDISite.homePage;
-import static epam.course.JDISite.login;
+import static epam.course.JDISite.*;
 
 /**
  * Created by Rita on 16.11.2016.
  */
 public class RadioTest extends InitTests {
 
-    @BeforeTest
+    @BeforeMethod
     public void before() {
-        homePage.isOpened();
-        login.submit(new User("epam", "1234"));
-        differentElementPage.open();
+        differentElementPage.isOpened();
     }
 
     @Test

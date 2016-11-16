@@ -14,7 +14,7 @@ import org.testng.Assert;
  */
 public class Login extends Form<User> {
 
-    @FindBy(css = ".profile-photo")
+    @FindBy(css = ".uui-profile-menu")
     private IClickable profile;
     @FindBy(id = "Login")
     private ITextField login;
@@ -23,7 +23,7 @@ public class Login extends Form<User> {
     @FindBy(css = ".btn-login")
     private IButton loginButton;
     @FindBy(css = ".logout span")
-    private IText logout;
+    private IText logoutText;
     @FindBy(css = ".login-txt")
     private IText errorMessageText;
 
@@ -35,7 +35,7 @@ public class Login extends Form<User> {
 
     public void validate(boolean userExists) {
         if (userExists) {
-            Assert.assertEquals("LOGOUT", logout.getText());
+            Assert.assertEquals("LOGOUT", logoutText.getText());
         } else {
             Assert.assertEquals("* Login Faild", errorMessageText.getText());
         }

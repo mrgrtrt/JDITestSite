@@ -3,8 +3,7 @@ package epam.course.tests;
 import epam.course.InitTests;
 import epam.course.dataproviders.LoginDP;
 import epam.course.objects.User;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
