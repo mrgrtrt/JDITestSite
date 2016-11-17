@@ -1,13 +1,8 @@
 package epam.course.tests;
 
-import com.epam.jdi.uitests.web.selenium.elements.common.CheckBox;
 import epam.course.InitTests;
 import epam.course.dataproviders.CheckboxDP;
-import epam.course.objects.User;
 import org.testng.annotations.*;
-
-import java.io.IOException;
-import java.lang.reflect.Method;
 
 import static epam.course.JDISite.*;
 

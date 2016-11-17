@@ -2,7 +2,6 @@ package epam.course.tests;
 
 import epam.course.InitTests;
 import epam.course.enums.MetalsRadio;
-import epam.course.objects.User;
 import org.testng.annotations.*;
 
 import static epam.course.JDISite.*;
@@ -13,6 +12,7 @@ import static epam.course.JDISite.*;
 public class RadioTest extends InitTests {
 
     @BeforeMethod
+
     public void before() {
         differentElementPage.isOpened();
     }

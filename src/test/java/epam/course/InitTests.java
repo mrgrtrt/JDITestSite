@@ -1,5 +1,6 @@
 package epam.course;
 
+import com.epam.jdi.uitests.web.selenium.driver.SeleniumDriverFactory;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.testng.testRunner.TestNGBase;
 import com.epam.web.matcher.verify.Verify;
@@ -24,6 +25,7 @@ public class InitTests extends TestNGBase {
     @AfterSuite
     public void tearDown() {
         Verify.getFails();
+        //SeleniumDriverFactory.;
     }
 
 }

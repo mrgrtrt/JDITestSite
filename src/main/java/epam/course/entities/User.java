@@ -1,4 +1,4 @@
-package epam.course.objects;
+package epam.course.entities;
 
 /**
  * Created by Rita on 16.11.2016.
