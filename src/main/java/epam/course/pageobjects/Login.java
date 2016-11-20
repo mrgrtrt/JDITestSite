@@ -33,8 +33,8 @@ public class Login extends Form<User> {
         super.submit(user);
     }
 
-    public void validate(boolean userExists) {
-        if (userExists) {
+    public void validate(User user) {
+        if (user.isExists) {
             Assert.assertEquals("LOGOUT", logoutText.getText());
         } else {
             Assert.assertEquals("* Login Faild", errorMessageText.getText());

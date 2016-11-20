@@ -19,10 +19,10 @@ public class LoginTest extends InitTests {
     }
 
     @Test(dataProviderClass = LoginDP.class, dataProvider = "login")
-    public void login(boolean userExists, String username, String password) {
+    public void login(User user) {
         homePage.refresh();
-        login.submit(new User(username, password));
-        login.validate(userExists);
+        login.submit(user);
+        login.validate(user);
     }
 
 }

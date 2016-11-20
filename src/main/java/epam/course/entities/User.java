@@ -7,10 +7,12 @@ public class User {
 
     private String login;
     private String password;
+    public boolean isExists;
 
-    public User(String login, String password) {
+    public User(boolean isExists, String login, String password) {
         this.login = login;
         this.password = password;
+        this.isExists = isExists;
     }
 
 }
