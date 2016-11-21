@@ -17,4 +17,14 @@
             <class name="epam.course.tests.RadioTest"/>
         </classes>
     </test>
+    <test name="search" verbose="2">
+        <classes>
+            <class name="epam.course.tests.SearchTest"/>
+        </classes>
+    </test>
+    <test name="pagination" verbose="2">
+        <classes>
+            <class name="epam.course.tests.NavigationTest"/>
+        </classes>
+    </test>
 </suite>

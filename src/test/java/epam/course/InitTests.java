@@ -25,7 +25,6 @@ public class InitTests extends TestNGBase {
     @AfterSuite
     public void tearDown() {
         Verify.getFails();
-        //SeleniumDriverFactory.;
     }
 
 }
