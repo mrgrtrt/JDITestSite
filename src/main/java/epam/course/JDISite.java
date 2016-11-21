@@ -7,10 +7,7 @@ import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JSite;
 import epam.course.pageobjects.Login;
 import epam.course.pageobjects.PageNavigator;
 import epam.course.pageobjects.SearchField;
-import epam.course.pages.DifferentElementPage;
-import epam.course.pages.HomePage;
-import epam.course.pages.MetalsAndColorsPage;
-import epam.course.pages.SupportPage;
+import epam.course.pages.*;
 import org.openqa.selenium.support.FindBy;
 
 /**
@@ -22,7 +19,10 @@ public class JDISite extends WebSite {
     @JPage(url = "/index.htm", title = "Index Page")
     public static HomePage homePage;
 
-    @JPage(url = "/page2..htm", title = "Metal and Colors")
+    @JPage(url = "/page1.htm", title = "Contact Form")
+    public static ContactPage contactPage;
+
+    @JPage(url = "/page2.htm", title = "Metal and Colors")
     public static MetalsAndColorsPage metalsAndColorsPage;
 
     @JPage(url = "/page3.htm", title = "Support")
