@@ -13,9 +13,9 @@ public class SearchField extends Search {
 
     @FindBy(css = ".search>.icon-search")
     private IClickable siteSearch;
-    @FindBy(css = ".search.search-field input")
+    @FindBy(css = ".search-field input")
     private ITextField searchInput;
-    @FindBy(css = "span.icon-search.active")
+    @FindBy(css = ".search .search-active .icon-search")
     private IButton searchButton;
 
     //find() is final so we override findAction()

@@ -34,7 +34,6 @@ public class JDISite extends WebSite {
     @FindBy(css = ".uui-profile-menu")
     public static Login login;
 
-    @FindBy(className = "search")
     public static SearchField search;
 
     @FindBy(className = "uui-pagination")

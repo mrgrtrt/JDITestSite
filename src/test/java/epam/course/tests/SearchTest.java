@@ -2,10 +2,9 @@ package epam.course.tests;
 
 import epam.course.InitTests;
 import epam.course.dataproviders.SearchDP;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static com.epam.jdi.uitests.core.interfaces.Application.currentSite;
 import static epam.course.JDISite.*;
 
 /**
@@ -13,15 +12,18 @@ import static epam.course.JDISite.*;
  */
 public class SearchTest extends InitTests {
 
-
-    @BeforeMethod
+    @BeforeTest
     public void before() {
         homePage.isOpened();
+        //login.submit(new User(true, "epam", "1234"));
     }
 
     @Test(dataProviderClass = SearchDP.class, dataProvider = "search")
-    public void searchTest(String text) {
-        search.find(text);
+    public void searchTest() {
+        //search.siteSearch.click();
+        //search.searchInput.sendKeys("text");
+        //search.searchButton.click();
+        search.find("text");
         supportPage.checkOpened();
     }
 
