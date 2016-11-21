@@ -15,8 +15,8 @@ public class NavigationTest extends InitTests {
 
     @BeforeTest
     public void before() {
-        homePage.isOpened();
-        login.submit(new User(true, "epam", "1234"));
+        //homePage.isOpened();
+        //login.submit(new User(true, "epam", "1234"));
         supportPage.isOpened();
     }
 
