@@ -14,7 +14,7 @@ import org.testng.Assert;
  */
 public class Login extends Form<User> {
 
-    @FindBy(css = ".uui-profile-menu")
+    @FindBy(css = ".profile-photo")
     private IClickable profile;
     @FindBy(id = "Login")
     private ITextField login;

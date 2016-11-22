@@ -4,17 +4,18 @@ import epam.course.InitTests;
 import epam.course.dataproviders.CheckboxDP;
 import org.testng.annotations.*;
 
+import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
 import static epam.course.JDISite.*;
+import static epam.course.enums.Preconditions.LOGGED_IN;
 
 /**
  * Created by Rita on 16.11.2016.
  */
 public class CheckboxesTest extends InitTests {
 
-    @BeforeMethod
+    @BeforeTest
     public void before() {
-        //homePage.isOpened();
-        //login.submit(new User("epam", "1234"));
+        isInState(LOGGED_IN);
         differentElementPage.isOpened();
     }
 

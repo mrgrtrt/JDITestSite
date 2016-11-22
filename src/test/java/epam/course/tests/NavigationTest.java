@@ -1,12 +1,12 @@
 package epam.course.tests;
 
 import epam.course.InitTests;
-import epam.course.entities.User;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
 import static epam.course.JDISite.*;
+import static epam.course.enums.Preconditions.LOGGED_IN;
 
 /**
  * Created by Rita on 21.11.2016.
@@ -15,8 +15,7 @@ public class NavigationTest extends InitTests {
 
     @BeforeTest
     public void before() {
-        //homePage.isOpened();
-        //login.submit(new User(true, "epam", "1234"));
+        isInState(LOGGED_IN);
         supportPage.isOpened();
     }
 

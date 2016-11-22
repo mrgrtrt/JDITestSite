@@ -18,11 +18,13 @@ public class SearchField extends Search {
     @FindBy(css = ".search .search-active .icon-search")
     private IButton searchButton;
 
-    //find() is final so we override findAction()
+    //find() is final so findAction() is overrided
+    //find() can't find the button locator -> findAction() is overrided this way
     @Override
     public void findAction(String text) {
         siteSearch.click();
-        super.findAction(text);
+        searchInput.sendKeys("text");
+        searchButton.click();
     }
 
 }

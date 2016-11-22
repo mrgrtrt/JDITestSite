@@ -1,5 +1,6 @@
 package epam.course;
 
+import com.epam.jdi.uitests.core.interfaces.base.IClickable;
 import com.epam.jdi.uitests.core.interfaces.common.IButton;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
@@ -34,8 +35,18 @@ public class JDISite extends WebSite {
     @FindBy(css = ".uui-profile-menu")
     public static Login login;
 
-    public static SearchField search;
+    @FindBy(css = ".logout")
+    public static IButton logout;
+
+    @FindBy(css = ".uui-profile-menu")
+    public static IClickable profile;
 
     @FindBy(className = "uui-pagination")
     public static PageNavigator pageNavigator;
+
+
+
+    public static SearchField search;
+
+
 }

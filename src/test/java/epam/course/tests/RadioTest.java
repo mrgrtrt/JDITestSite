@@ -4,7 +4,9 @@ import epam.course.InitTests;
 import epam.course.enums.MetalsRadio;
 import org.testng.annotations.*;
 
+import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
 import static epam.course.JDISite.*;
+import static epam.course.enums.Preconditions.LOGGED_IN;
 
 /**
  * Created by Rita on 16.11.2016.
@@ -14,6 +16,7 @@ public class RadioTest extends InitTests {
     @BeforeMethod
 
     public void before() {
+        isInState(LOGGED_IN);
         differentElementPage.isOpened();
     }
 
