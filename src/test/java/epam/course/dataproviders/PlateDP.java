@@ -2,9 +2,7 @@ package epam.course.dataproviders;
 
 import epam.course.entities.Plate;
 import epam.course.entities.Summary;
-import epam.course.enums.ElementsCheckbox;
-import epam.course.enums.EvenRadio;
-import epam.course.enums.OddsRadio;
+import epam.course.enums.*;
 import org.testng.annotations.DataProvider;
 
 /**
@@ -16,7 +14,10 @@ public class PlateDP {
     public static Object[][] metalsAndColorsData() {
         return new Object[][]{
                 {new Plate(new Summary(OddsRadio.FIVE, EvenRadio.EIGHT),
-                           new ElementsCheckbox[]{ElementsCheckbox.EARTH, ElementsCheckbox.WATER}
+                           new ElementsCheckbox[]{ElementsCheckbox.EARTH, ElementsCheckbox.WATER},
+                           ColorsDropdown.RED,
+                           MetalsRadio.BRONZE,
+                           new SaladComponent[]{SaladComponent.CUCUMBER, SaladComponent.ONION}
                            )}
         };
     }

@@ -1,5 +1,6 @@
 package epam.course.tests;
 
+import com.epam.web.matcher.testng.Assert;
 import epam.course.InitTests;
 import epam.course.enums.MetalsRadio;
 import org.testng.annotations.*;
@@ -14,7 +15,6 @@ import static epam.course.enums.Preconditions.LOGGED_IN;
 public class RadioTest extends InitTests {
 
     @BeforeMethod
-
     public void before() {
         isInState(LOGGED_IN);
         differentElementPage.isOpened();
