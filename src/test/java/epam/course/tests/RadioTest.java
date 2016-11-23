@@ -1,6 +1,5 @@
 package epam.course.tests;
 
-import com.epam.web.matcher.testng.Assert;
 import epam.course.InitTests;
 import epam.course.enums.MetalsRadio;
 import org.testng.annotations.*;

@@ -1,6 +1,5 @@
 package epam.course.dataproviders;
 
-import epam.course.entities.User;
 import org.testng.annotations.DataProvider;
 
 /**

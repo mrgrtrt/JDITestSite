@@ -4,18 +4,13 @@ import epam.course.InitTests;
 import epam.course.dataproviders.PlateDP;
 import epam.course.entities.Plate;
 import epam.course.enums.ElementsCheckbox;
-import epam.course.enums.MetalsRadio;
 import epam.course.enums.SaladComponent;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
 import static epam.course.JDISite.metalsAndColorsPage;
 import static epam.course.enums.Preconditions.LOGGED_IN;
-import static java.util.Arrays.asList;
 
 /**
  * Created by Rita on 23.11.2016.

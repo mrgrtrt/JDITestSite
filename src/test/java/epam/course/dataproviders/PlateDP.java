@@ -18,7 +18,13 @@ public class PlateDP {
                            ColorsDropdown.RED,
                            MetalsRadio.BRONZE,
                            new SaladComponent[]{SaladComponent.CUCUMBER, SaladComponent.ONION}
-                           )}
+                           )},
+                {new Plate(new Summary(OddsRadio.ONE, EvenRadio.SIX),
+                        new ElementsCheckbox[]{ElementsCheckbox.EARTH, ElementsCheckbox.FIRE, ElementsCheckbox.WATER},
+                        ColorsDropdown.GREEN,
+                        MetalsRadio.SILVER,
+                        new SaladComponent[]{SaladComponent.ONION}
+                )}
         };
     }
 
