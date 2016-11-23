@@ -6,7 +6,6 @@ import epam.course.entities.User;
 
 import java.util.function.Supplier;
 
-import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.alwaysMoveToCondition;
 import static epam.course.JDISite.*;
 
 /**
@@ -21,8 +20,9 @@ public enum Preconditions implements WebPreconditions {
             }
     ),
     LOGGED_OUT(
-            () -> logout.isHidden(),
+            () -> login.isDisplayed(),
             () -> {
+                homePage.isOpened();
                 profile.click();
                 logout.click();
             }
@@ -34,7 +34,6 @@ public enum Preconditions implements WebPreconditions {
     Preconditions(Supplier<Boolean> checkAction, JAction moveToAction) {
         this.checkAction = checkAction;
         this.moveToAction = moveToAction;
-        alwaysMoveToCondition = true;
     }
 
     public Boolean checkAction() {

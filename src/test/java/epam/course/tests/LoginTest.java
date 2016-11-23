@@ -17,8 +17,8 @@ public class LoginTest extends InitTests {
 
     @BeforeTest
     public void before() {
+        homePage.isOpened();
         isInState(LOGGED_OUT);
-        //homePage.isOpened();
     }
 
     @Test(dataProviderClass = LoginDP.class, dataProvider = "login")
