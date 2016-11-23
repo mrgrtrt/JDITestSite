@@ -1,15 +1,16 @@
 package epam.course.entities;
 
-import epam.course.enums.EvenRadio;
-import epam.course.enums.OddsRadio;
+import epam.course.enums.ElementsCheckbox;
 
 /**
  * Created by Rita on 21.11.2016.
  */
 public class Plate {
     public Summary summary;
+    public ElementsCheckbox[] elementsCheckboxes;
 
-    public Plate(Summary summary) {
+    public Plate(Summary summary, ElementsCheckbox[] elementsCheckboxes) {
         this.summary = summary;
+        this.elementsCheckboxes = elementsCheckboxes;
     }
 }
