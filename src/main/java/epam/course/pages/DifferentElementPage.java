@@ -22,7 +22,7 @@ public class DifferentElementPage extends WebPage {
     @FindBy(xpath = "//label[contains(., 'Fire')]/input")
     private CheckBox fire;
 
-    @FindBy(css = ".checkbox-row .label-radio")
+    @FindBy(css = ".checkbox-row .label-radio input")
     public RadioButtons<MetalsRadio> metalsRadio;
 
     public void checkboxesChecking(boolean waterCheck, boolean earthCheck, boolean windCheck, boolean fireCheck) {
