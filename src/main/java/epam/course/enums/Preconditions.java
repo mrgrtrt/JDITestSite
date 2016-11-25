@@ -13,16 +13,15 @@ import static epam.course.JDISite.*;
  */
 public enum Preconditions implements WebPreconditions {
     LOGGED_IN(
-            () -> logout.isDisplayed(),
             () -> {
                 homePage.isOpened();
-                login.submit(new User(true, "epam", "1234"));
-            }
+                return userName.isDisplayed();
+            },
+            () -> login.submit(new User(true, "epam", "1234"))
     ),
     LOGGED_OUT(
-            () -> login.isDisplayed(),
+            () -> !userName.isDisplayed(),
             () -> {
-                homePage.isOpened();
                 profile.click();
                 logout.click();
             }

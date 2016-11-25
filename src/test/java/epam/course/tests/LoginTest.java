@@ -8,6 +8,7 @@ import org.testng.annotations.*;
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
 import static epam.course.JDISite.homePage;
 import static epam.course.JDISite.login;
+import static epam.course.JDISite.logout;
 import static epam.course.enums.Preconditions.LOGGED_OUT;
 
 /**
@@ -26,6 +27,12 @@ public class LoginTest extends InitTests {
         homePage.refresh();
         login.submit(user);
         login.validate(user);
+    }
+
+    @AfterTest
+    public void logout() {
+        logout.click();
+        homePage.refresh();
     }
 
 }

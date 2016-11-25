@@ -2,6 +2,7 @@ package epam.course;
 
 import com.epam.jdi.uitests.core.interfaces.base.IClickable;
 import com.epam.jdi.uitests.core.interfaces.common.IButton;
+import com.epam.jdi.uitests.core.interfaces.common.IText;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JSite;
@@ -37,6 +38,9 @@ public class JDISite extends WebSite {
 
     @FindBy(css = ".logout")
     public static IButton logout;
+
+    @FindBy(css = ".profile-photo span")
+    public static IText userName;
 
     @FindBy(css = ".uui-profile-menu")
     public static IClickable profile;

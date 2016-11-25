@@ -2,7 +2,6 @@ package epam.course.tests;
 
 import epam.course.InitTests;
 import epam.course.enums.MetalsRadio;
-import org.junit.Assert;
 import org.testng.annotations.*;
 
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
