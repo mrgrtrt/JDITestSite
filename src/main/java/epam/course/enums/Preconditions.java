@@ -17,7 +17,7 @@ public enum Preconditions implements WebPreconditions {
                 homePage.isOpened();
                 return userName.isDisplayed();
             },
-            () -> login.submit(new User(true, "epam", "1234"))
+            () -> login.login(new User(true, "epam", "1234"))
     ),
     LOGGED_OUT(
             () -> !userName.isDisplayed(),

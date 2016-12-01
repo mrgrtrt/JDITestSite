@@ -1,36 +1,21 @@
 <?xml version="1.0" encoding="WINDOWS-1251"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite name="jdiSuite" verbose="2">
-
-    <test name="checkbox" verbose="2">
+        <!-- to launch a parallel tests execution uncomment the line below -->
+<!-- <suite name="jdiSuite" verbose="2" parallel="classes" thread-count="2"> -->
+<suite name="jdiSuite" verbose="2" parallel="classes" thread-count="2">
+    <test name="JDIFrameworkSiteTest">
         <classes>
             <class name="epam.course.tests.CheckboxesTest"/>
-        </classes>
-    </test>
-    <test name="radio" verbose="2">
-        <classes>
             <class name="epam.course.tests.RadioTest"/>
-        </classes>
-    </test>
-    <test verbose="2" name="login">
-        <classes>
             <class name="epam.course.tests.LoginTest"/>
-        </classes>
-    </test>
-    <test name="search" verbose="2">
-        <classes>
             <class name="epam.course.tests.SearchTest"/>
-        </classes>
-    </test>
-    <test name="pagination" verbose="2">
-        <classes>
             <class name="epam.course.tests.NavigationTest"/>
-        </classes>
-    </test>
-    <test name="plate" verbose="2">
-        <classes>
             <class name="epam.course.tests.PlateTest"/>
+            <class name="epam.course.tests.ContactFormTest"/>
+            <class name="epam.course.tests.SimpleTableTest"/>
+            <class name="epam.course.tests.TableEntriesDropdownTest"/>
+            <class name="epam.course.tests.TableSearchTest"/>
+            <class name="epam.course.tests.DateCalendarTest"/>
         </classes>
     </test>
 </suite>

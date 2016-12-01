@@ -8,6 +8,7 @@ import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
 import epam.course.entities.User;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import ru.yandex.qatools.allure.annotations.Step;
 
 /**
  * Created by Rita on 15.11.2016.
@@ -28,11 +29,13 @@ public class Login extends Form<User> {
     private IText errorMessageText;
 
     @Override
-    public void submit(User user) {
+    @Step("Fill and submit the login form")
+    public void login(User user) {
         profile.click();
-        super.submit(user);
+        super.login(user);
     }
 
+    @Step("Check if the login data is right")
     public void validate(User user) {
         if (user.isExists) {
             Assert.assertEquals("LOGOUT", logoutText.getText());

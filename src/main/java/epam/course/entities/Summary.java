@@ -11,6 +11,11 @@ public class Summary {
     public OddsRadio oddsRadio;
     public EvenRadio evenRadio;
 
+    public Summary() {
+        this.oddsRadio = OddsRadio.ONE;
+        this.evenRadio = EvenRadio.TWO;
+    }
+
     public Summary(OddsRadio oddsRadio, EvenRadio evenRadio) {
         this.oddsRadio = oddsRadio;
         this.evenRadio = evenRadio;

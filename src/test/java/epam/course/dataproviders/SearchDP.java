@@ -13,7 +13,7 @@ public class SearchDP {
                 {"Lorem"},
                 {"Ipsum"},
                 {"dolor"},
-                {"sit"}
+                {""}
         };
     }
 

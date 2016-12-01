@@ -12,6 +12,7 @@ import epam.course.enums.*;
 import epam.course.pageobjects.SummarySection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.allure.annotations.Step;
 
 /**
  * Created by Rita on 21.11.2016.
@@ -46,6 +47,7 @@ public class MetalsAndColorsPage extends WebPage {
     @FindBy(id = "submit-button")
     public IButton submitButton;
 
+    @Step("Uncheck default checkboxes in DropList")
     public void uncheckAll() {
         saladComponent.check(SaladComponent.SALAD);
     }

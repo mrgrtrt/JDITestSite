@@ -14,16 +14,22 @@ public class PlateDP {
     public static Object[][] metalsAndColorsData() {
         return new Object[][]{
                 {new Plate(new Summary(OddsRadio.FIVE, EvenRadio.EIGHT),
-                           new ElementsCheckbox[]{ElementsCheckbox.EARTH, ElementsCheckbox.WATER},
+                           new ElementsCheckbox[]{ElementsCheckbox.WATER, ElementsCheckbox.EARTH},
                            ColorsDropdown.RED,
                            MetalsRadio.BRONZE,
                            new SaladComponent[]{SaladComponent.CUCUMBER, SaladComponent.ONION}
                            )},
                 {new Plate(new Summary(OddsRadio.ONE, EvenRadio.SIX),
-                        new ElementsCheckbox[]{ElementsCheckbox.EARTH, ElementsCheckbox.FIRE, ElementsCheckbox.WATER},
+                        new ElementsCheckbox[]{ElementsCheckbox.WATER, ElementsCheckbox.EARTH, ElementsCheckbox.FIRE},
                         ColorsDropdown.GREEN,
                         MetalsRadio.SILVER,
                         new SaladComponent[]{SaladComponent.ONION}
+                )},
+                {new Plate(new Summary(),
+                        new ElementsCheckbox[]{},
+                        ColorsDropdown.YELLOW,
+                        MetalsRadio.SELEN,
+                        new SaladComponent[]{}
                 )}
         };
     }

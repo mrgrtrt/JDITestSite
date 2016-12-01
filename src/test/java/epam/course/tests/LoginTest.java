@@ -4,6 +4,7 @@ import epam.course.InitTests;
 import epam.course.dataproviders.LoginDP;
 import epam.course.entities.User;
 import org.testng.annotations.*;
+import ru.yandex.qatools.allure.annotations.Title;
 
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
 import static epam.course.JDISite.homePage;
@@ -16,20 +17,21 @@ import static epam.course.enums.Preconditions.LOGGED_OUT;
  */
 public class LoginTest extends InitTests {
 
-    @BeforeTest
+    @BeforeClass
     public void before() {
         homePage.isOpened();
         isInState(LOGGED_OUT);
     }
 
+    @Title("Test login")
     @Test(dataProviderClass = LoginDP.class, dataProvider = "login")
     public void login(User user) {
         homePage.refresh();
-        login.submit(user);
+        login.login(user);
         login.validate(user);
     }
 
-    @AfterTest
+    @AfterClass
     public void logout() {
         logout.click();
         homePage.refresh();
