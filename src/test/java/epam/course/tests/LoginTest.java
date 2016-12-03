@@ -7,9 +7,7 @@ import org.testng.annotations.*;
 import ru.yandex.qatools.allure.annotations.Title;
 
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
-import static epam.course.JDISite.homePage;
-import static epam.course.JDISite.login;
-import static epam.course.JDISite.logout;
+import static epam.course.JDISite.*;
 import static epam.course.enums.Preconditions.LOGGED_OUT;
 
 /**
@@ -25,8 +23,7 @@ public class LoginTest extends InitTests {
 
     @Title("Test login")
     @Test(dataProviderClass = LoginDP.class, dataProvider = "login")
-    public void login(User user) {
-        homePage.refresh();
+    public void loginTest(User user) {
         login.login(user);
         login.validate(user);
     }

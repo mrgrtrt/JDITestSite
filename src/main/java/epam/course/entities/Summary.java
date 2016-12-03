@@ -21,4 +21,9 @@ public class Summary {
         this.evenRadio = evenRadio;
     }
 
+    @Override
+    public String toString() {
+        return (oddsRadio + ", " + evenRadio);
+    }
+
 }

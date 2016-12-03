@@ -24,4 +24,11 @@ public class Plate {
         this.metal = metal;
         this.saladComponents = saladComponents;
     }
+
+    @Override
+    public String toString() {
+        return (summary + ", " +
+                elementsCheckboxes + ", " +
+                color + ", " + metal + ", " + saladComponents);
+    }
 }

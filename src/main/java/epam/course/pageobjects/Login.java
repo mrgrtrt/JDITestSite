@@ -32,6 +32,8 @@ public class Login extends Form<User> {
     @Step("Fill and submit the login form")
     public void login(User user) {
         profile.click();
+        login.clear();
+        password.clear();
         super.login(user);
     }
 
@@ -41,6 +43,7 @@ public class Login extends Form<User> {
             Assert.assertEquals("LOGOUT", logoutText.getText());
         } else {
             Assert.assertEquals("* Login Faild", errorMessageText.getText());
+            profile.click();
         }
     }
 

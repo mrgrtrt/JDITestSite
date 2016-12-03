@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="jdiSuite" verbose="2" parallel="classes" thread-count="2">
+    <test name="JDIFrameworkSiteTest">
+        <classes>
+            <class name="epam.course.tests.CheckboxesTest"/>
+            <class name="epam.course.tests.RadioTest"/>
+            <class name="epam.course.tests.LoginTest"/>
+            <class name="epam.course.tests.SearchTest"/>
+            <class name="epam.course.tests.NavigationTest"/>
+            <class name="epam.course.tests.PlateTest"/>
+            <class name="epam.course.tests.ContactFormTest"/>
+            <class name="epam.course.tests.SimpleTableTest"/>
+            <class name="epam.course.tests.TableEntriesDropdownTest"/>
+            <class name="epam.course.tests.TableSearchTest"/>
+            <class name="epam.course.tests.DateCalendarTest"/>
+        </classes>
+    </test>
+</suite>

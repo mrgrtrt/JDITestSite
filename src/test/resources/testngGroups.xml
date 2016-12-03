@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="WINDOWS-1251"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-        <!--to launch a parallel tests execution uncomment the line below-->
-<!-- <suite name="jdiSuite" verbose="2" parallel="classes" thread-count="2"> -->
 <suite name="jdiSuite" verbose="2">
     <test name="JDIFrameworkSiteTest">
+        <groups>
+            <run>
+                <include name="DifferentElementsPage"/>
+            </run>
+        </groups>
         <classes>
             <class name="epam.course.tests.CheckboxesTest"/>
             <class name="epam.course.tests.RadioTest"/>

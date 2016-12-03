@@ -59,7 +59,7 @@
               <driver>${driver}</driver>
           </systemPropertyVariables>
           <suiteXmlFiles>
-            <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/testngGroups.xml</suiteXmlFile>
           </suiteXmlFiles>
           <testFailureIgnore>true</testFailureIgnore>
           <argLine>

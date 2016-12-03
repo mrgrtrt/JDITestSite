@@ -1,11 +1,13 @@
 package epam.course.tests;
 
 import epam.course.InitTests;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Title;
 
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
+import static com.epam.web.matcher.testng.Assert.assertTrue;
 import static epam.course.JDISite.*;
 import static epam.course.enums.Preconditions.LOGGED_IN;
 
@@ -42,14 +44,10 @@ public class NavigationTest extends InitTests {
         contactPage.checkOpened();
     }
 
-    @Title("Try to open previous page for the first page")
+    @Title("Check that 'prev' button is disabled after first page ")
     @Test(priority = 4)
     public void prevAfterFirstTest() {
-        try {
-            pageNavigator.previous();
-        } catch (Exception e) {
-            contactPage.checkOpened();
-        }
+        assertTrue(contactPage.getDriver().findElement(By.cssSelector(".prev")).getAttribute("class").contains("disable"));
     }
 
     @Title("Open last page")
@@ -59,13 +57,9 @@ public class NavigationTest extends InitTests {
         metalsAndColorsPage.checkOpened();
     }
 
-    @Title("Try to open next page for the last page")
+    @Title("Check that 'next' button is disabled after last page")
     @Test(priority = 6)
     public void nextAfterLastTest() {
-        try {
-            pageNavigator.next();
-        } catch (Exception e) {
-            metalsAndColorsPage.checkOpened();
-        }
+        assertTrue(metalsAndColorsPage.getDriver().findElement(By.cssSelector(".next")).getAttribute("class").contains("disable"));
     }
 }

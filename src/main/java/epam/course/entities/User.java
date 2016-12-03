@@ -15,4 +15,8 @@ public class User {
         this.isExists = isExists;
     }
 
+    @Override
+    public String toString() {
+        return ("User(" + login + ',' + password + ")");
+    }
 }

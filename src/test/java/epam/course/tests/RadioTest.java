@@ -15,14 +15,14 @@ import static epam.course.enums.Preconditions.LOGGED_IN;
  */
 public class RadioTest extends InitTests {
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void before() {
         isInState(LOGGED_IN);
         differentElementPage.isOpened();
     }
 
     @Title("Test radio buttons on 'Different Elements Page'")
-    @Test
+    @Test(groups = { "DifferentElementsPage" })
     public void radioButtonsTest() {
         differentElementPage.metalsRadio.select(1);
         assertContains(actionsLog.getFirstText(), "metal: value changed to Gold");

@@ -6,7 +6,7 @@ import epam.course.entities.Plate;
 import epam.course.enums.ElementsCheckbox;
 import epam.course.enums.SaladComponent;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Title;
 
@@ -30,28 +30,31 @@ public class PlateTest extends InitTests {
         metalsAndColorsPage.isOpened();
     }
 
+    @BeforeMethod
+    public void refreshPage() {
+        metalsAndColorsPage.refresh();
+    }
+
     @Title("Test 'Metals And Colors Page'")
     @Test(dataProviderClass = PlateDP.class, dataProvider = "metalsAndColors")
     public void plateTest(Plate plate) {
+        List<String> elements = new ArrayList<>();
+        List<String> components = new ArrayList<>();
         metalsAndColorsPage.summarySection.submitSummary(plate.summary);
 
-        List<String> elements = new ArrayList<>();
+        metalsAndColorsPage.elementsCheckbox.select(plate.elementsCheckboxes);
         for (ElementsCheckbox elementsCheckbox : plate.elementsCheckboxes) {
-            metalsAndColorsPage.elementsCheckbox.select(elementsCheckbox);
             elements.add(elementsCheckbox.value);
         }
-        String elementsString = String.join(", ", elements);
 
         metalsAndColorsPage.colors.select(plate.color);
         metalsAndColorsPage.metals.select(plate.metal);
 
-        List<String> components = new ArrayList<>();
         metalsAndColorsPage.uncheckAll();
+        metalsAndColorsPage.saladComponent.check(plate.saladComponents);
         for (SaladComponent saladComponent : plate.saladComponents) {
-            metalsAndColorsPage.saladComponent.check(saladComponent);
             components.add(saladComponent.value);
         }
-        String componentsString = String.join(", ", components);
         metalsAndColorsPage.submitButton.click();
 
         /*BUGs on the page(?)
@@ -62,12 +65,10 @@ public class PlateTest extends InitTests {
         */
         int summary = Integer.parseInt(plate.summary.oddsRadio.value) + Integer.parseInt(plate.summary.evenRadio.value);
         matches(resultsLog.getFirstText(), ("Summary: " + summary));
-        matches(resultsLog.getText(1), ("Elements: " + elementsString));
+        matches(resultsLog.getText(1), ("Elements: " + String.join(", ", elements)));
         matches(resultsLog.getText(2), ("Color: " + plate.color.value));
         matches(resultsLog.getText(3), ("Metal: " + plate.metal.value));
-        matches(resultsLog.getText(4), ("Vegetables: " + componentsString));
-
-        metalsAndColorsPage.refresh();
+        matches(resultsLog.getText(4), ("Vegetables: " + String.join(", ", components)));
 
     }
 

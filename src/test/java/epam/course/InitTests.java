@@ -35,7 +35,7 @@ public class InitTests extends TestNGBase {
         );
 
         //JDISettings.driverFactory.setCurrentDriver(System.getProperty("driver"));
-        WebSettings.useDriver(System.getProperty("driver"));
+        //WebSettings.useDriver(System.getProperty("driver"));
 
 
         ActionScenrios.actionScenario = (element, actionName, jAction, level) -> {
