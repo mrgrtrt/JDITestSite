@@ -11,9 +11,4 @@ public enum ElementsCheckbox {
     ElementsCheckbox(String value) {
         this.value = value;
     }
-
-    @Override
-    public String toString() {
-        return value;
-    }
 }
