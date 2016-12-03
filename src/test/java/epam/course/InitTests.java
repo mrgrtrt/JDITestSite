@@ -27,16 +27,12 @@ public class InitTests extends TestNGBase {
     @BeforeSuite(alwaysRun = true)
     public static void setUp() {
 
-
         MapInterfaceToElement.update(
                 new Object[][] {
                         {ISearch.class, SearchField.class}
                 }
         );
-
-        //JDISettings.driverFactory.setCurrentDriver(System.getProperty("driver"));
-        //WebSettings.useDriver(System.getProperty("driver"));
-
+        WebSettings.useDriver(System.getProperty("driver"));
 
         ActionScenrios.actionScenario = (element, actionName, jAction, level) -> {
             Timer time = new Timer();
