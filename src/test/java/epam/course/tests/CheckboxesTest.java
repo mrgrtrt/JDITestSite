@@ -6,8 +6,6 @@ import epam.course.enums.ElementsCheckbox;
 import org.testng.annotations.*;
 import ru.yandex.qatools.allure.annotations.Title;
 
-import java.util.List;
-
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
 import static com.epam.web.matcher.testng.Assert.assertContains;
 import static epam.course.JDISite.*;

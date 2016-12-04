@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Title;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static com.epam.jdi.uitests.core.preconditions.PreconditionsState.isInState;
@@ -46,7 +47,6 @@ public class PlateTest extends InitTests {
         for (ElementsCheckbox elementsCheckbox : plate.elementsCheckboxes) {
             elements.add(elementsCheckbox.value);
         }
-
         metalsAndColorsPage.colors.select(plate.color);
         metalsAndColorsPage.metals.select(plate.metal);
 
